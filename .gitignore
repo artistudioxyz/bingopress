@@ -1,0 +1,10 @@
+# IDE
+.idea/
+.vscode/
+
+# Dummy
+composer.lock
+option.json
+package-lock.json
+*.DS_Store
+.DS_Store
