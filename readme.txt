@@ -4,7 +4,7 @@ Tags: blog, portfolio
 Requires at least: 5.0
 Tested up to: 5.8.2
 Requires PHP: 7.1
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 Images for theme are self-created by author,
 License: GPL-3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
@@ -16,6 +16,9 @@ BingoPress Theme is simple WordPress theme built with TailwindCSS.
 BingoPress Theme is simple WordPress theme built with TailwindCSS.
 
 == Changelog ==
+
+= 1.0.1 (27.11.2022) =
+* Minor bug fixes feedback from WordPress theme team
 
 = 1.0.0 (20.11.2022) =
 * Initial release
