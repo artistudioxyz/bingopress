@@ -19,3 +19,5 @@
 <header>
     <?php get_template_part( 'template-parts/elements/site-nav' ); ?>
 </header>
+
+<div id="body-content">
