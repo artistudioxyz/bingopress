@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'name' => 'bingopress/framework',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
+        'reference' => NULL,
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'dev' => false,
+    ),
+    'versions' => array(
+        'bingopress/framework' => array(
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'reference' => NULL,
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'freemius/wordpress-sdk' => array(
+            'pretty_version' => '2.5.2',
+            'version' => '2.5.2.0',
+            'reference' => '35782eb9f19eefc63723afb3196c768bca6dfbd9',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../freemius/wordpress-sdk',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'tgmpa/tgm-plugin-activation' => array(
+            'pretty_version' => '2.6.1',
+            'version' => '2.6.1.0',
+            'reference' => 'c626d0d91fc8ef24916e809c7b79eeafab1c1cac',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../tgmpa/tgm-plugin-activation',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+    ),
+);
