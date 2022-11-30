@@ -5,7 +5,7 @@
  * Description:       Floating Awesome Button (BINGOPRESS) is customizable action button that can help you display custom content (modal, shortcodes, widgets, links, etc).
  * Version:           1.3.6
  * Author:            Agung Sundoro
- * Author URI:        https://wiki.artistudio.xyz/
+ * Author URI:        https://agung2001.github.io
  * License:           GPL-3.0
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
  *
