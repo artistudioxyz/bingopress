@@ -2,6 +2,12 @@
 .idea/
 .vscode/
 
+# Library
+node_modules/
+ 
+ 
+ 
+
 # Dummy
 composer.lock
 option.json
