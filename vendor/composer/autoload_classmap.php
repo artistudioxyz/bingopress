@@ -16,7 +16,6 @@ return array(
     'BingoPress\\Controller\\CustomizerFooter' => $baseDir . '/src/Controller/Customizer/CustomizerFooter.php',
     'BingoPress\\Controller\\CustomizerPanel' => $baseDir . '/src/Controller/Customizer/CustomizerPanel.php',
     'BingoPress\\Controller\\Frontend' => $baseDir . '/src/Controller/Frontend/Frontend.php',
-    'BingoPress\\Controller\\Plugin' => $baseDir . '/src/Controller/Plugin/Plugin.php',
     'BingoPress\\Controller\\Tgmpa' => $baseDir . '/src/Controller/Tgmpa.php',
     'BingoPress\\Controller\\Theme' => $baseDir . '/src/Controller/Theme/Theme.php',
     'BingoPress\\Controller\\Upgrade' => $baseDir . '/src/Controller/Upgrade.php',
@@ -60,9 +59,7 @@ return array(
     'BingoPress\\WordPress\\Hook\\Filter' => $vendorDir . '/artistudioxyz/dot-framework/src/WordPress/Hook/Filter.php',
     'BingoPress\\WordPress\\Hook\\Hook' => $vendorDir . '/artistudioxyz/dot-framework/src/WordPress/Hook/Hook.php',
     'BingoPress\\WordPress\\Hook\\Shortcode' => $vendorDir . '/artistudioxyz/dot-framework/src/WordPress/Hook/Shortcode.php',
-    'BingoPress\\WordPress\\Page\\MenuPage' => $vendorDir . '/artistudioxyz/dot-framework/src/WordPress/Page/MenuPage.php',
     'BingoPress\\WordPress\\Page\\Page' => $vendorDir . '/artistudioxyz/dot-framework/src/WordPress/Page/Page.php',
-    'BingoPress\\WordPress\\Page\\SubmenuPage' => $vendorDir . '/artistudioxyz/dot-framework/src/WordPress/Page/SubmenuPage.php',
     'BingoPress\\WordPress\\Theme\\Page' => $vendorDir . '/artistudioxyz/dot-framework/src/WordPress/Theme/Page.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
 );
