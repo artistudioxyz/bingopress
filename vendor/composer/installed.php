@@ -28,5 +28,23 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'freemius/wordpress-sdk' => array(
+            'pretty_version' => '2.5.3',
+            'version' => '2.5.3.0',
+            'reference' => '2e56d683dd7b30445940679ecb401d2aff746c9e',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../freemius/wordpress-sdk',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'tgmpa/tgm-plugin-activation' => array(
+            'pretty_version' => '2.6.1',
+            'version' => '2.6.1.0',
+            'reference' => 'c626d0d91fc8ef24916e809c7b79eeafab1c1cac',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../tgmpa/tgm-plugin-activation',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
     ),
 );
