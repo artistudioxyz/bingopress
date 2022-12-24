@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit22a7c77bc7d0158241699d4c4e6de25f
+class ComposerStaticInitc7167d09a32cdce3e913b84dee9d377d
 {
     public static $classMap = array (
         'BingoPress\\Api\\Api' => __DIR__ . '/..' . '/artistudioxyz/dot-framework/src/Framework/Api.php',
@@ -71,7 +71,7 @@ class ComposerStaticInit22a7c77bc7d0158241699d4c4e6de25f
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInit22a7c77bc7d0158241699d4c4e6de25f::$classMap;
+            $loader->classMap = ComposerStaticInitc7167d09a32cdce3e913b84dee9d377d::$classMap;
 
         }, null, ClassLoader::class);
     }
