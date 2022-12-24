@@ -13,7 +13,7 @@ namespace BingoPress\Controller;
 
 use BingoPress\Elementor\ElementorBannerSimpleWidget;
 use BingoPress\View;
-use BingoPress\Wordpress\Hook\Action;
+use BingoPress\WordPress\Hook\Action;
 
 class Frontend extends Base
 {
@@ -122,7 +122,7 @@ class Frontend extends Base
         /** Animate.css */
         if(isset($config->bingopress_animation) && $config->bingopress_animation) $this->WP->wp_enqueue_style( 'animatecss', 'vendor/animatecss/animate.min.css' );
 
-        /** Load Special Plugin Components */
+        /** Load Special Theme Components */
         $components = ['search'];
         foreach($components as $component){
             $this->WP->wp_enqueue_style( sprintf('bingopress-%s-component', $component), sprintf('build/components/%s/bundle.css', $component) );
@@ -132,7 +132,7 @@ class Frontend extends Base
         /** Styles and Scripts */
         $this->WP->wp_enqueue_style('bingopress_css', "build/css/frontend.min.css");
         $this->WP->wp_enqueue_style('bingopress_theme_css', "../style.css");
-        $this->WP->wp_enqueue_script('bingopress_page_js', "build/js/frontend/plugin.min.js", [], '', true);
+        $this->WP->wp_enqueue_script('bingopress_page_js', "build/js/frontend/theme.min.js", [], '', true);
     }
 
     /**

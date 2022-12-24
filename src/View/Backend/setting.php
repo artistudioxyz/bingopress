@@ -8,7 +8,7 @@
 				/** Grab Data */
 				$config_path = sprintf(
 					'%s/src/View/Backend/Settings/%s.php',
-					json_decode( BINGOPRESS_PATH )->plugin_path,
+					json_decode( BINGOPRESS_PATH )->framework_path,
 					$feature->getName()
 				);
 				if ( file_exists( $config_path ) ) :
@@ -42,7 +42,7 @@
 					<div class="w-3/4 mx-auto">
 						<img
 								class="animate__animated animate__<?php echo esc_attr( $options->bingopress_animation->elements->logo ); ?>"
-								src="<?php echo esc_url( json_decode( BINGOPRESS_PATH )->plugin_url ); ?>/assets/img/logo.png"
+								src="<?php echo esc_url( json_decode( BINGOPRESS_PATH )->framework_url ); ?>/assets/img/logo.png"
 								alt="<?php echo esc_attr( $this->Page->getPageTitle() ); ?>"
 						>
 					</div>
@@ -56,7 +56,7 @@
 						<?php
 						$config_path = sprintf(
 							'%s/src/View/Backend/Settings/%s.php',
-							json_decode( BINGOPRESS_PATH )->plugin_path,
+							json_decode( BINGOPRESS_PATH )->framework_path,
 							$feature->getName()
 						);
 						if ( ! file_exists( $config_path ) ) {
@@ -107,7 +107,7 @@
 <script type="text/javascript">
 	/** Initiate Setting Scripts */
 	jQuery(function($) {
-		window.BINGOPRESS_PLUGIN.init_setting();
+		window.BINGOPRESS_THEME.init_setting();
 	});
 </script>
 

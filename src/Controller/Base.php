@@ -5,7 +5,7 @@ namespace BingoPress\Controller;
 !defined( 'WPINC ' ) or die;
 
 /**
- * Plugin hooks in a backend
+ * Theme hooks in a backend
  *
  * @package    BingoPress
  * @subpackage BingoPress/Controller

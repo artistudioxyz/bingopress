@@ -11,7 +11,7 @@ namespace BingoPress\Controller;
 * @subpackage BingoPress/Controller
 */
 
-use BingoPress\Wordpress\Hook\Action;
+use BingoPress\WordPress\Hook\Action;
 
 class Tgmpa extends Base
 {
@@ -40,20 +40,20 @@ class Tgmpa extends Base
     }
 
     /**
-     * Register the required plugins for this theme.
+     * Register the required framework for this theme.
      *
      *  <snip />
      *
      * This function is hooked into tgmpa_init, which is fired within the
-     * TGM_Plugin_Activation class constructor.
+     * TGM_Theme_Activation class constructor.
      */
     public function tgmpa_register()
     {
         /**
-         * Array of plugin arrays. Required keys are name and slug.
+         * Array of theme arrays. Required keys are name and slug.
          * If the source is NOT from the .org repo, then source is also required.
          */
-        $themes = $this->must_use_plugins();
+        $themes = $this->must_use_framework();
 
         /**
          * Array of configuration settings. Amend each line as needed.
@@ -66,31 +66,31 @@ class Tgmpa extends Base
          */
         $config = [
             'id' => 'tgmpa',                 // Unique ID for hashing notices for multiple instances of TGMPA.
-            'default_path' => '',                      // Default absolute path to bundled plugins.
-            'menu' => 'tgmpa-install-plugins', // Menu slug.
+            'default_path' => '',                      // Default absolute path to bundled framework.
+            'menu' => 'tgmpa-install-framework', // Menu slug.
             'parent_slug' => 'themes.php',            // Parent menu slug.
-            'capability' => 'edit_theme_options',    // Capability needed to view plugin install page, should be a capability associated with the parent menu used.
+            'capability' => 'edit_theme_options',    // Capability needed to view theme install page, should be a capability associated with the parent menu used.
             'has_notices' => true,                    // Show admin notices or not.
             'dismissable' => true,                    // If false, a user cannot dismiss the nag message.
             'dismiss_msg' => '',                      // If 'dismissable' is false, this message will be output at top of nag.
-            'is_automatic' => false,                   // Automatically activate plugins after installation or not.
-            'message' => '',                      // Message to output right before the plugins table.
+            'is_automatic' => false,                   // Automatically activate framework after installation or not.
+            'message' => '',                      // Message to output right before the framework table.
         ];
 
         tgmpa($themes, $config);
     }
 
     /**
-     * Lists all of must use plugins
-     * Array of plugin arrays. Required keys are name and slug.
+     * Lists all of must use framework
+     * Array of theme arrays. Required keys are name and slug.
      * If the source is NOT from the .org repo, then source is also required.
      *
      * @return array
      */
-    private function must_use_plugins()
+    private function must_use_framework()
     {
         return [
-            // Include a plugin from the WordPress Plugin Repository.
+            // Include a theme from the WordPress Theme Repository.
             [
                 'name' => __('Elementor','bingopress'),
                 'slug' => 'elementor',

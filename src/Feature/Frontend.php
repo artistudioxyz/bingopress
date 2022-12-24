@@ -5,7 +5,7 @@ namespace BingoPress\Feature;
 !defined( 'WPINC ' ) or die;
 
 /**
- * Initiate plugins
+ * Initiate framework
  *
  * @package    BingoPress
  * @subpackage BingoPress\Includes
@@ -23,7 +23,7 @@ class Frontend extends Feature {
         parent::__construct($theme);
         $this->key = 'core_frontend';
         $this->name = 'Frontend';
-        $this->description = 'Handles plugin frontend core function';
+        $this->description = 'Handles theme frontend core function';
     }
 
 }

@@ -7,7 +7,7 @@
 			<div class="bg-white shadow-md border border-gray-200 rounded-lg grid grid-cols-3 px-6 pt-4">
 				<div class="font-medium text-gray-600 col-span-2">
 					<?php
-                        $bingopress_path = json_decode( BINGOPRESS_PATH )->plugin_url . 'assets/';
+                        $bingopress_path = json_decode( BINGOPRESS_PATH )->framework_url . 'assets/';
 					if ( ! strpos( $asset->src, '//' ) ) {
 						$asset->src = $bingopress_path . $asset->src;
 					}
@@ -53,7 +53,7 @@
 			<div class="bg-white shadow-md border border-gray-200 rounded-lg grid grid-cols-3 px-6 pt-4">
 				<div class="font-medium text-gray-600 col-span-2">
 					<?php
-						$bingopress_path = json_decode( BINGOPRESS_PATH )->plugin_url . 'assets/';
+						$bingopress_path = json_decode( BINGOPRESS_PATH )->framework_url . 'assets/';
 					if ( ! strpos( $asset->src, '//' ) ) {
 						$asset->src = $bingopress_path . $asset->src;
 					}

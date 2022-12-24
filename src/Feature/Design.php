@@ -5,7 +5,7 @@ namespace BingoPress\Feature;
 ! defined( 'WPINC ' ) or die;
 
 /**
- * Initiate plugins
+ * Initiate framework
  *
  * @package    BingoPress
  * @subpackage BingoPress\Includes
@@ -25,7 +25,7 @@ class Design extends Feature {
 		$this->WP          = $theme->getWP();
 		$this->key         = 'core_design';
 		$this->name        = 'Design';
-		$this->description = 'Handles plugin core design';
+		$this->description = 'Handles theme core design';
 	}
 
 	/**

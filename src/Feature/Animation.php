@@ -5,7 +5,7 @@ namespace BingoPress\Feature;
 ! defined( 'WPINC ' ) or die;
 
 /**
- * Initiate plugins
+ * Initiate framework
  *
  * @package    BingoPress
  * @subpackage BingoPress\Includes
@@ -25,7 +25,7 @@ class Animation extends Feature {
 		$this->WP          = $theme->getWP();
 		$this->key         = 'core_animation';
 		$this->name        = 'Animation';
-		$this->description = 'Handles plugin core animation';
+		$this->description = 'Handles theme core animation';
 	}
 
 	/**
