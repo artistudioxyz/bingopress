@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitc7167d09a32cdce3e913b84dee9d377d
+class ComposerStaticInit90ee76a3a526ae3f4aa5cec14ec94e2b
 {
     public static $classMap = array (
         'BingoPress\\Api\\Api' => __DIR__ . '/..' . '/artistudioxyz/dot-framework/src/Framework/Api.php',
@@ -17,7 +17,6 @@ class ComposerStaticInitc7167d09a32cdce3e913b84dee9d377d
         'BingoPress\\Controller\\CustomizerFooter' => __DIR__ . '/../..' . '/src/Controller/Customizer/CustomizerFooter.php',
         'BingoPress\\Controller\\CustomizerPanel' => __DIR__ . '/../..' . '/src/Controller/Customizer/CustomizerPanel.php',
         'BingoPress\\Controller\\Frontend' => __DIR__ . '/../..' . '/src/Controller/Frontend/Frontend.php',
-        'BingoPress\\Controller\\Plugin' => __DIR__ . '/../..' . '/src/Controller/Plugin/Plugin.php',
         'BingoPress\\Controller\\Tgmpa' => __DIR__ . '/../..' . '/src/Controller/Tgmpa.php',
         'BingoPress\\Controller\\Theme' => __DIR__ . '/../..' . '/src/Controller/Theme/Theme.php',
         'BingoPress\\Controller\\Upgrade' => __DIR__ . '/../..' . '/src/Controller/Upgrade.php',
@@ -61,9 +60,7 @@ class ComposerStaticInitc7167d09a32cdce3e913b84dee9d377d
         'BingoPress\\WordPress\\Hook\\Filter' => __DIR__ . '/..' . '/artistudioxyz/dot-framework/src/WordPress/Hook/Filter.php',
         'BingoPress\\WordPress\\Hook\\Hook' => __DIR__ . '/..' . '/artistudioxyz/dot-framework/src/WordPress/Hook/Hook.php',
         'BingoPress\\WordPress\\Hook\\Shortcode' => __DIR__ . '/..' . '/artistudioxyz/dot-framework/src/WordPress/Hook/Shortcode.php',
-        'BingoPress\\WordPress\\Page\\MenuPage' => __DIR__ . '/..' . '/artistudioxyz/dot-framework/src/WordPress/Page/MenuPage.php',
         'BingoPress\\WordPress\\Page\\Page' => __DIR__ . '/..' . '/artistudioxyz/dot-framework/src/WordPress/Page/Page.php',
-        'BingoPress\\WordPress\\Page\\SubmenuPage' => __DIR__ . '/..' . '/artistudioxyz/dot-framework/src/WordPress/Page/SubmenuPage.php',
         'BingoPress\\WordPress\\Theme\\Page' => __DIR__ . '/..' . '/artistudioxyz/dot-framework/src/WordPress/Theme/Page.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
@@ -71,7 +68,7 @@ class ComposerStaticInitc7167d09a32cdce3e913b84dee9d377d
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInitc7167d09a32cdce3e913b84dee9d377d::$classMap;
+            $loader->classMap = ComposerStaticInit90ee76a3a526ae3f4aa5cec14ec94e2b::$classMap;
 
         }, null, ClassLoader::class);
     }
