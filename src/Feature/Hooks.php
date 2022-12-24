@@ -5,7 +5,7 @@ namespace BingoPress\Feature;
 ! defined( 'WPINC ' ) or die;
 
 /**
- * Initiate plugins
+ * Initiate framework
  *
  * @package    BingoPress
  * @subpackage BingoPress\Includes
@@ -25,7 +25,7 @@ class Hooks extends Feature {
         $this->WP          = $theme->getWP();
         $this->key         = 'core_hooks';
         $this->name        = 'Hooks';
-        $this->description = 'Handles plugin hooks management';
+        $this->description = 'Handles theme hooks management';
     }
 
     /**

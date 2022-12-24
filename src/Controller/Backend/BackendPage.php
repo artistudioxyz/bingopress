@@ -5,15 +5,15 @@ namespace BingoPress\Controller;
 ! defined( 'WPINC ' ) or die;
 
 /**
-* Initiate plugins
+* Initiate framework
 *
 * @package    BingoPress
 * @subpackage BingoPress/Controller
 */
 
 use BingoPress\View;
-use BingoPress\Wordpress\Hook\Action;
-use BingoPress\Wordpress\Page\ThemePage;
+use BingoPress\WordPress\Hook\Action;
+use BingoPress\WordPress\Theme\Page;
 
 class BackendPage extends Base {
 
@@ -21,7 +21,7 @@ class BackendPage extends Base {
 	 * Admin constructor
 	 *
 	 * @return void
-	 * @var    object   $theme     Plugin configuration
+	 * @var    object   $theme     Theme configuration
 	 * @pattern prototype
 	 */
 	public function __construct( $theme ) {
@@ -90,7 +90,7 @@ class BackendPage extends Base {
         /**
          * Set Page.
          */
-        $page = new ThemePage();
+        $page = new Page();
         $page->setPageTitle(BINGOPRESS_NAME);
         $page->setMenuTitle(BINGOPRESS_NAME);
         $page->setCapability('manage_options');

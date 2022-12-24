@@ -12,7 +12,7 @@ $config = $this->Theme->getConfig();
             <div class="w-3/4 mx-auto">
                 <img
                     class="mx-auto animate__animated animate__<?php echo esc_attr( $options->bingopress_animation->elements->logo ); ?>"
-                    src="<?php echo esc_url( json_decode( BINGOPRESS_PATH )->plugin_url ); ?>/assets/img/logo.png"
+                    src="<?php echo esc_url( json_decode( BINGOPRESS_PATH )->framework_url ); ?>/assets/img/logo.png"
                     alt="<?php echo esc_attr( $this->Page->getPageTitle() ); ?>"
                 >
             </div>

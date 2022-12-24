@@ -11,7 +11,7 @@ namespace BingoPress\Controller;
  * @subpackage BingoPress/Controller
  */
 
-use BingoPress\Wordpress\Hook\Action;
+use BingoPress\WordPress\Hook\Action;
 
 class Theme extends Base {
 

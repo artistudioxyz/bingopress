@@ -5,14 +5,14 @@ namespace BingoPress\Controller;
 ! defined( 'WPINC ' ) or die;
 
 /**
- * Plugin hooks in a backend
+ * Theme hooks in a backend
  *setComponent
  *
  * @package    BingoPress
  * @subpackage BingoPress/Controller
  */
 
-use BingoPress\Wordpress\Hook\Action;
+use BingoPress\WordPress\Hook\Action;
 
 class CustomizerPanel extends Base {
 
@@ -20,7 +20,7 @@ class CustomizerPanel extends Base {
      * Admin constructor
      *
      * @return void
-     * @var    object   $theme     Plugin configuration
+     * @var    object   $theme     Theme configuration
      * @pattern prototype
      */
     public function __construct( $theme ) {
