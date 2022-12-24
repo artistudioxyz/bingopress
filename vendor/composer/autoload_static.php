@@ -4,8 +4,12 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit90ee76a3a526ae3f4aa5cec14ec94e2b
+class ComposerStaticInit5965ae9a999cbff86ad268c87cd97b7f
 {
+    public static $files = array (
+        'a5f882d89ab791a139cd2d37e50cdd80' => __DIR__ . '/..' . '/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php',
+    );
+
     public static $classMap = array (
         'BingoPress\\Api\\Api' => __DIR__ . '/..' . '/artistudioxyz/dot-framework/src/Framework/Api.php',
         'BingoPress\\Controller\\Backend' => __DIR__ . '/../..' . '/src/Controller/Backend/Backend.php',
@@ -68,7 +72,7 @@ class ComposerStaticInit90ee76a3a526ae3f4aa5cec14ec94e2b
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInit90ee76a3a526ae3f4aa5cec14ec94e2b::$classMap;
+            $loader->classMap = ComposerStaticInit5965ae9a999cbff86ad268c87cd97b7f::$classMap;
 
         }, null, ClassLoader::class);
     }
