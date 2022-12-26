@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit5965ae9a999cbff86ad268c87cd97b7f
+class ComposerStaticInit65d315c0fd52bc37da08201f95206e6f
 {
     public static $files = array (
         'a5f882d89ab791a139cd2d37e50cdd80' => __DIR__ . '/..' . '/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php',
@@ -23,7 +23,6 @@ class ComposerStaticInit5965ae9a999cbff86ad268c87cd97b7f
         'BingoPress\\Controller\\Frontend' => __DIR__ . '/../..' . '/src/Controller/Frontend/Frontend.php',
         'BingoPress\\Controller\\Tgmpa' => __DIR__ . '/../..' . '/src/Controller/Tgmpa.php',
         'BingoPress\\Controller\\Theme' => __DIR__ . '/../..' . '/src/Controller/Theme/Theme.php',
-        'BingoPress\\Controller\\Upgrade' => __DIR__ . '/../..' . '/src/Controller/Upgrade.php',
         'BingoPress\\Feature\\Animation' => __DIR__ . '/../..' . '/src/Feature/Animation.php',
         'BingoPress\\Feature\\Asset' => __DIR__ . '/../..' . '/src/Feature/Asset.php',
         'BingoPress\\Feature\\Backend' => __DIR__ . '/../..' . '/src/Feature/Backend.php',
@@ -72,7 +71,7 @@ class ComposerStaticInit5965ae9a999cbff86ad268c87cd97b7f
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->classMap = ComposerStaticInit5965ae9a999cbff86ad268c87cd97b7f::$classMap;
+            $loader->classMap = ComposerStaticInit65d315c0fd52bc37da08201f95206e6f::$classMap;
 
         }, null, ClassLoader::class);
     }

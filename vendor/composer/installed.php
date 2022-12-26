@@ -38,9 +38,9 @@
             'dev_requirement' => false,
         ),
         'tgmpa/tgm-plugin-activation' => array(
-            'pretty_version' => '2.6.1',
-            'version' => '2.6.1.0',
-            'reference' => 'c626d0d91fc8ef24916e809c7b79eeafab1c1cac',
+            'pretty_version' => '2.6.0',
+            'version' => '2.6.0.0',
+            'reference' => 'afccf1e273299aa9d181a43669474acfdca37d96',
             'type' => 'library',
             'install_path' => __DIR__ . '/../tgmpa/tgm-plugin-activation',
             'aliases' => array(),

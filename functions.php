@@ -12,9 +12,10 @@ require get_template_directory( __FILE__ ) . '/vendor/autoload.php';
 $bingopress = new BingoPress\Theme();
 $bingopress->run();
 
-/** Activation Hook */
-register_activation_hook( __FILE__, array( $bingopress, 'activate' ) );
-
-/** Uninstall Hook */
-register_uninstall_hook( __FILE__, 'bingopress_uninstall_theme' );
-function bingopress_uninstall_theme() { delete_option( 'bingopress_config' ); }
+/** Activation and Deactivation */
+add_action('admin_init', function(){
+    global $pagenow;
+    if ( is_admin() && isset($_GET['activated'] ) && $pagenow == "themes.php" ) {
+        delete_option( 'bingopress_config' );
+    }
+});

@@ -50,7 +50,6 @@ class Backend extends Base {
         $screen  = $this->WP->getScreen();
 		$slug    = sprintf( '%s-setting', $this->Theme->getSlug() );
 		$screens = array( sprintf( 'appearance_page_%s', $slug ) );
-		$types   = array( 'bingopress' );
 
 		/** Load Inline Script */
 		$this->WP->wp_enqueue_script( 'bingopress-local', 'local/bingopress.js', array(), '', true );
@@ -79,7 +78,7 @@ class Backend extends Base {
 
 		/** Load Theme Assets */
 		$this->WP->wp_enqueue_style( 'bingopress', 'build/css/backend.min.css' );
-		$this->WP->wp_enqueue_script( 'bingopress', 'build/js/backend/theme.min.js', array(), '', true );
+		$this->WP->wp_enqueue_script( 'bingopress', 'build/js/backend/backend.min.js', array(), '', true );
 	}
 
 }
