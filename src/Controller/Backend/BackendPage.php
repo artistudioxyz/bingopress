@@ -68,7 +68,7 @@ class BackendPage extends Base {
 		if ( ! $this->Theme->getConfig()->production ) {
 			$sections['Backend.feature'] = array( 'name' => 'Feature' );
 		}
-		$sections['Backend.about'] = array( 'name' => 'About', 'active' => true );
+		$sections['Backend.about'] = array( 'name' => 'About', 'active' => true);
 
 		/** Set View */
 		$view = new View( $this->Theme );

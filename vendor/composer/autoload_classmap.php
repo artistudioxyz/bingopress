@@ -18,7 +18,6 @@ return array(
     'BingoPress\\Controller\\Frontend' => $baseDir . '/src/Controller/Frontend/Frontend.php',
     'BingoPress\\Controller\\Tgmpa' => $baseDir . '/src/Controller/Tgmpa.php',
     'BingoPress\\Controller\\Theme' => $baseDir . '/src/Controller/Theme/Theme.php',
-    'BingoPress\\Controller\\Upgrade' => $baseDir . '/src/Controller/Upgrade.php',
     'BingoPress\\Feature\\Animation' => $baseDir . '/src/Feature/Animation.php',
     'BingoPress\\Feature\\Asset' => $baseDir . '/src/Feature/Asset.php',
     'BingoPress\\Feature\\Backend' => $baseDir . '/src/Feature/Backend.php',

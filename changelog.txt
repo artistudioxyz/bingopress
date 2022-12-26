@@ -1,0 +1,8 @@
+# 📟 Changelog
+
+## 1.2.9 (2022-12-26)
+
+
+### Bug Fixes
+
+* **wp:** conventional commit test (d6d8425)
