@@ -1,5 +1,13 @@
 # 📟 Changelog
 
+## 1.2.10 (2022-12-28)
+
+
+### Bug Fixes
+
+* **wp:** missmatch Requires at least, Tested up to and Requires PHP (0ed65cf)
+* **wp:** remove Theme URI from style.css (0d55ef1)
+
 ## 1.2.9 (2022-12-26)
 
 
