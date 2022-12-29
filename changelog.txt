@@ -1,5 +1,14 @@
 # 📟 Changelog
 
+## 1.2.11 (2022-12-29)
+
+
+### Bug Fixes
+
+* **wp:** add original files to all minfied assets (47dc036)
+* **wp:** re-add Theme URI (44b64b9)
+* **wp:** remove DIRECTORY_SEPARATOR use trailingslashit instead (2e1c7b1)
+
 ## 1.2.10 (2022-12-28)
 
 

@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'artistudioxyz/dot-framework' => array(
-            'pretty_version' => 'v0.0.5',
-            'version' => '0.0.5.0',
-            'reference' => '1f1d132137d7324803fabe02f2435fbc70567aa1',
+            'pretty_version' => 'v0.1.0',
+            'version' => '0.1.0.0',
+            'reference' => '377845378c162b3ffde12f8d3bc52502bfe8bbb9',
             'type' => 'library',
             'install_path' => __DIR__ . '/../artistudioxyz/dot-framework',
             'aliases' => array(),

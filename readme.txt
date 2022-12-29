@@ -4,7 +4,7 @@ Tags: blog, portfolio
 Requires at least: 5.0
 Tested up to: 6.1.1
 Requires PHP: 7.1
-Stable tag: 1.2.10
+Stable tag: 1.2.11
 License: GPL-3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.txt
 
@@ -36,9 +36,9 @@ Changelog has been moved to `changelog.txt`
 == Theme Resources ==
 
 * BingoPress Theme Self Designed Images:
-    assets/img/cover.jpg
-    assets/img/loading.jpg
-    assets/img/logo.jpg
+    originalassets/img/cover.jpg
+    originalassets/img/loading.jpg
+    originalassets/img/logo.jpg
 
 = Declaring these self designed images under GPL license version 2.0 =
 License URL: http://www.gnu.org/licenses/gpl-2.0.html
