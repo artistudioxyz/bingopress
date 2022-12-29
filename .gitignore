@@ -1,16 +1,19 @@
 # IDE
-.idea/
-.vscode/
+/.idea/
+/.vscode/
 
 # Library
-node_modules/
-
-
+/node_modules/
 
 
 # Dummy
 composer.lock
-option.json
 package-lock.json
 *.DS_Store
 .DS_Store
+
+# Build
+
+
+
+

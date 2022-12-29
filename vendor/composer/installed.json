@@ -2,20 +2,20 @@
     "packages": [
         {
             "name": "artistudioxyz/dot-framework",
-            "version": "v0.0.5",
-            "version_normalized": "0.0.5.0",
+            "version": "v0.1.0",
+            "version_normalized": "0.1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/artistudioxyz/dot-framework.git",
-                "reference": "1f1d132137d7324803fabe02f2435fbc70567aa1"
+                "reference": "377845378c162b3ffde12f8d3bc52502bfe8bbb9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/artistudioxyz/dot-framework/zipball/1f1d132137d7324803fabe02f2435fbc70567aa1",
-                "reference": "1f1d132137d7324803fabe02f2435fbc70567aa1",
+                "url": "https://api.github.com/repos/artistudioxyz/dot-framework/zipball/377845378c162b3ffde12f8d3bc52502bfe8bbb9",
+                "reference": "377845378c162b3ffde12f8d3bc52502bfe8bbb9",
                 "shasum": ""
             },
-            "time": "2022-12-24T05:19:11+00:00",
+            "time": "2022-12-29T01:07:05+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -37,7 +37,7 @@
             "description": "Simple WordPress Utility Library for building better Plugins and Themes.",
             "support": {
                 "issues": "https://github.com/artistudioxyz/dot-framework/issues",
-                "source": "https://github.com/artistudioxyz/dot-framework/tree/v0.0.5"
+                "source": "https://github.com/artistudioxyz/dot-framework/tree/v0.1.0"
             },
             "funding": [
                 {
