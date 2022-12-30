@@ -4,84 +4,17 @@
 		window.BINGOPRESS_THEME.modalSearch(),
 			window.BINGOPRESS_THEME.siteMobileNav()
 	},
-	jQueryConfirmBINGOPRESS: () => {
-		jQuery('.bingopress-container .bingopress-links').each(function () {
-			'link' != jQuery(this).data('type') &&
-				jQuery(this).click(function () {
-					let e = window.BINGOPRESS_THEME.dialogs || {},
-						n = jQuery(this).data('modal'),
-						o = `#${n}`,
-						i = jQuery(o).data('title'),
-						t = jQuery(this).data('hotkey')
-					t &&
-						(i += `<div \n                                class="inline-block absolute hidden md:block ml-4 text-xs rounded-md border border-gray-200"\n                                style="background-color: #f6f6f6; padding: .45rem .5rem; font-size: 0.75rem; top:1.9rem; right:6rem;" \n                                >${(t =
-							(t = (t = (t = t.replace('ctrl', '⌃')).replace(
-								'alt',
-								'⌥'
-							)).replace('shift', '⇧')).replace(
-								'+',
-								' '
-							)).toUpperCase()}</div>`)
-					let r = `j-${window.BINGOPRESS_THEME.options.bingopress_design.size.type}`
-					;(e[n] = jQuery.dialog({
-						title: i,
-						icon: jQuery(o).data('icon'),
-						columnClass: r,
-						content: jQuery(o).html(),
-						escapeKey: !0,
-						backgroundDismiss: !0,
-						onOpen: function () {
-							let e = this,
-								n = jQuery(e.content)
-							;(n = (n = void 0 !== n[0] ? jQuery(n[0]) : jQuery(n)).data(
-								'id'
-							)),
-								new (window.MutationObserver || window.WebKitMutationObserver)(
-									function () {
-										let o = jQuery(`#${n}`).html()
-										e.setContent(o)
-									}
-								).observe(document.getElementById(n), {
-									subtree: !0,
-									attributes: !0,
-								})
-						},
-					})),
-						(window.BINGOPRESS_THEME.dialogs = e),
-						setTimeout(function () {
-							jQuery('.jconfirm-closeIcon').html('esc')
-						}, 100)
-				})
-		})
-	},
 	bingopressCloseDialogs: () => {
-		let e = window.BINGOPRESS_THEME.dialogs || {}
-		for (let n in e) e[n].close()
-	},
-	bingopressHotkeysInit: () => {
-		jQuery('.bingopress-links').each(function () {
-			let e = jQuery(this).data('hotkey')
-			if (e) {
-				let n = jQuery(this).attr('id')
-				jQuery(document).bind('keydown', e.toString(), function () {
-					window.BINGOPRESS_THEME.bingopressCloseDialogs()
-					let e = jQuery(`#${n}`)
-					e.attr('href')
-						? '_blank' === e.attr('target')
-							? window.open(e.attr('href'))
-							: (window.location = e.attr('href'))
-						: e.trigger('click')
-				})
-			}
-		})
+		let o = window.BINGOPRESS_THEME.dialogs || {}
+		for (let n in o) o[n].close()
 	},
 	modalSearch: () => {
 		jQuery('.bingopress-search-button').click(function () {
-			let e = '#bingopress-search-dom',
+			let o = '#bingopress-search-dom',
 				n = {
 					title: '',
-					icon: jQuery(e).data('icon'),
-					content: jQuery(e).children(':first'),
+					icon: jQuery(o).data('icon'),
+					content: jQuery(o).children(':first'),
 					draggable: !0,
 					escapeKey: !0,
 					backgroundDismiss: !0,
@@ -90,10 +23,10 @@
 					closeAnimation: 'fabcustomcloseanimation',
 					animationSpeed: '1000',
 					onOpenBefore: function () {
-						let e = jQuery('.jconfirm-box-container')
-						e.hide(),
+						let o = jQuery('.jconfirm-box-container')
+						o.hide(),
 							setTimeout(function () {
-								e.show(), e.addClass('jconfirm-animation-fabmodalopen')
+								o.show(), o.addClass('jconfirm-animation-fabmodalopen')
 							}, 1)
 						let n = 'bingopress-search-modal jconfirm-medium '
 						;(n += this.draggable
@@ -105,14 +38,17 @@
 						jQuery('.jconfirm-closeIcon').before(
 							'<ul class="jconfirm-navigation"></ul>'
 						),
-							jQuery('.jconfirm-closeIcon').prepend('<div>&nbsp;</div>')
+							jQuery('.jconfirm-closeIcon').attr('tabindex', 0),
+							jQuery('.jconfirm-closeIcon').focus(function () {
+								jQuery('.jconfirm-closeIcon').click()
+							})
 					},
 					onClose: function () {
 						jQuery('.jconfirm-box-container').addClass(
 							'jconfirm-animation-fabmodalclose'
 						)
 						let n = { ...this.content }
-						this.setContent(this.content.html()), jQuery(e).html(n)
+						this.setContent(this.content.html()), jQuery(o).html(n)
 					},
 				}
 			jQuery.dialog(n)

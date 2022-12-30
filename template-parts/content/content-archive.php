@@ -12,7 +12,7 @@ global $post;
 $post->featured = get_the_post_thumbnail_url($post->ID, 'full');
 ?>
 
-<div class="grid-item pb-2">
+<div id="primary-content" class="grid-item pb-2">
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <div class="transition-all shadow-md hover:shadow-xl duration-300 bg-white border border-gray-100 rounded-md relative">
             <?php if($post->featured){ ?>

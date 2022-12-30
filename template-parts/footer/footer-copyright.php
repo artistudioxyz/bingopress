@@ -1,6 +1,6 @@
 <?php
 $bingopress = \BingoPress\Theme::getInstance();
-$copyright = sprintf('© %s All Rights Reserved by BingoPress.', date('Y'));
+$copyright = sprintf('© %s %s.', date('Y'), get_bloginfo('title'));
 $copyright = get_theme_mod('bingopress_footer_copyright_text', $copyright);
 $social_media =  $bingopress->getConfig()->default->bingopress_social_media;
 ?>
