@@ -1,65 +1,51 @@
 ;(window.BINGOPRESS_THEME = {
 	...window.BINGOPRESS_THEME,
 	init: () => {
-		window.BINGOPRESS_THEME.modalSearch(),
-			window.BINGOPRESS_THEME.siteMobileNav()
+		window.BINGOPRESS_THEME.siteMobileNav()
 	},
 	bingopressCloseDialogs: () => {
-		let o = window.BINGOPRESS_THEME.dialogs || {}
-		for (let n in o) o[n].close()
+		let e = window.BINGOPRESS_THEME.dialogs || {}
+		for (let i in e) e[i].close()
 	},
-	modalSearch: () => {
-		jQuery('.bingopress-search-button').click(function () {
-			let o = '#bingopress-search-dom',
-				n = {
-					title: '',
-					icon: jQuery(o).data('icon'),
-					content: jQuery(o).children(':first'),
-					draggable: !0,
-					escapeKey: !0,
-					backgroundDismiss: !0,
-					closeIconClass: 'fas fa-times text-base',
-					animation: 'fabcustomcloseanimation',
-					closeAnimation: 'fabcustomcloseanimation',
-					animationSpeed: '1000',
-					onOpenBefore: function () {
-						let o = jQuery('.jconfirm-box-container')
-						o.hide(),
-							setTimeout(function () {
-								o.show(), o.addClass('jconfirm-animation-fabmodalopen')
-							}, 1)
-						let n = 'bingopress-search-modal jconfirm-medium '
-						;(n += this.draggable
-							? 'bingopress-modal-draggable '
-							: 'bingopress-modal-notdraggable'),
-							jQuery('.jconfirm').addClass(n)
-					},
-					onOpen: function () {
-						jQuery('.jconfirm-closeIcon').before(
-							'<ul class="jconfirm-navigation"></ul>'
-						),
-							jQuery('.jconfirm-closeIcon').attr('tabindex', 0),
-							jQuery('.jconfirm-closeIcon').focus(function () {
-								jQuery('.jconfirm-closeIcon').click()
-							})
-					},
-					onClose: function () {
-						jQuery('.jconfirm-box-container').addClass(
-							'jconfirm-animation-fabmodalclose'
-						)
-						let n = { ...this.content }
-						this.setContent(this.content.html()), jQuery(o).html(n)
-					},
-				}
-			jQuery.dialog(n)
-		})
+	siteNav: () => {
+		function e() {
+			jQuery(this).parents('.sub-menu').addClass('sub-menu-active')
+			let e = jQuery(this).next()
+			e.hasClass('sub-menu') && e.addClass('sub-menu-active')
+		}
+		function i() {
+			jQuery('.sub-menu').removeClass('sub-menu-active')
+		}
+		jQuery('#menu-primary a').focusin(e),
+			jQuery('#menu-primary a').focusout(i),
+			jQuery('#menu-primary a').mouseenter(e),
+			jQuery('#menu-primary a').mouseout(i)
 	},
 	siteMobileNav: () => {
-		jQuery('.site-mobile-nav-show').click(function () {
-			jQuery('#menu-nav').show()
+		jQuery(window).on('resize', function () {
+			jQuery(window).width() >= 768 &&
+				jQuery('#menu-mobile-nav').is(':visible') &&
+				jQuery('#menu-mobile-nav').hide()
 		}),
+			jQuery('#menu-mobile-nav .sub-menu').each(function () {
+				jQuery(this)
+					.prev()
+					.before(
+						'<a href="#" class="mobile-sub-menu-toggle"><i class="fas fa-caret-down"></i></a>'
+					)
+			}),
+			jQuery('.mobile-sub-menu-toggle').on('click', function () {
+				let e = jQuery(this).siblings('.sub-menu').first(),
+					i = jQuery(this).find('i').first()
+				i.hasClass('fa-caret-down')
+					? (i.removeClass('fa-caret-down').addClass('fa-caret-up'), e.show())
+					: (i.removeClass('fa-caret-up').addClass('fa-caret-down'), e.hide())
+			}),
+			jQuery('.site-mobile-nav-show').click(function () {
+				jQuery('#menu-mobile-nav').show()
+			}),
 			jQuery('.site-mobile-nav-hide').click(function () {
-				jQuery('#menu-nav').hide()
+				jQuery('#menu-mobile-nav').hide()
 			})
 	},
 }),

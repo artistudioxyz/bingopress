@@ -14,7 +14,7 @@ $post->featured = get_the_post_thumbnail_url($post->ID, 'full');
 
 <div id="primary-content" class="grid-item pb-2">
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <div class="transition-all shadow-md hover:shadow-xl duration-300 bg-white border border-gray-100 rounded-md relative">
+        <div class="transition-all w-full shadow-md hover:shadow-xl duration-300 bg-white border border-gray-100 rounded-md relative">
             <?php if($post->featured){ ?>
                 <div class="mx-auto text-center w-full relative px-4 pt-4">
                     <a href="<?php echo esc_attr(get_permalink($post->ID)) ?>">
