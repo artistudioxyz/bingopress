@@ -1,5 +1,18 @@
 # 📟 Changelog
 
+## 1.2.12 (2022-12-30)
+
+
+### Bug Fixes
+
+* **wp:** change tgmpa notice id (decc79d)
+* **wp:** copyright credits for theme asset libraries (770acae)
+* **wp:** fix keyboard accessibility navigation site-nav.php (d9383e5)
+* **wp:** remove default footer copyright (a8c4bfb)
+* **wp:** remove jQuery hotkeys (5095a18)
+* **wp:** responsive issue viewport change breaking layout (8902f22)
+* **wp:** skip link is missing (f3a8732)
+
 ## 1.2.11 (2022-12-29)
 
 

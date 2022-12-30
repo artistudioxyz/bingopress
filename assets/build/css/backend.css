@@ -436,8 +436,8 @@
 .bingopress-container .mb-24 {
 	margin-bottom: 6rem;
 }
-.bingopress-container .mr-8 {
-	margin-right: 2rem;
+.bingopress-container .mr-4 {
+	margin-right: 1rem;
 }
 .bingopress-container .mt-4 {
 	margin-top: 1rem;
@@ -465,9 +465,6 @@
 }
 .bingopress-container .mt-1 {
 	margin-top: 0.25rem;
-}
-.bingopress-container .mr-4 {
-	margin-right: 1rem;
 }
 .bingopress-container .mb-4 {
 	margin-bottom: 1rem;
@@ -1269,6 +1266,9 @@
 	.bingopress-container .md\:block {
 		display: block;
 	}
+	.bingopress-container .md\:inline-block {
+		display: inline-block;
+	}
 	.bingopress-container .md\:flex {
 		display: -webkit-box;
 		display: -webkit-flex;
@@ -1426,9 +1426,6 @@
 	}
 	.bingopress-container .lg\:block {
 		display: block;
-	}
-	.bingopress-container .lg\:inline-block {
-		display: inline-block;
 	}
 	.bingopress-container .lg\:w-1\/4 {
 		width: 25%;

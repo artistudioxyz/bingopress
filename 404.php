@@ -15,7 +15,7 @@ $bingopress_image_attributes = get_theme_mod('bingopress_404_page_cover', '');
 $bingopress_image_attributes = isset($bingopress_image_attributes->ID) ? wp_get_attachment_image_url($bingopress_image_attributes->ID) : $bingopress_image_attributes;
 ?>
 <!-- Hero -->
-<section class="bg-animated-rectangle w-full px-6 antialiased">
+<section id="primary-content" class="bg-animated-rectangle w-full px-6 antialiased">
 
     <ul class="circles hidden md:block lg:block z-1">
         <li></li>
