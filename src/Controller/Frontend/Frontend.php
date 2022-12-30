@@ -123,7 +123,7 @@ class Frontend extends Base
         if (isset($config->bingopress_animation) && $config->bingopress_animation) $this->WP->wp_enqueue_style('animatecss', 'vendor/animatecss/animate.min.css');
 
         /** Load Special Theme Components */
-        $components = ['search'];
+        $components = [];
         foreach ($components as $component) {
             $this->WP->wp_enqueue_style(sprintf('bingopress-%s-component', $component), sprintf('build/components/%s/bundle.css', $component));
             $this->WP->wp_enqueue_script(sprintf('bingopress-%s-component', $component), sprintf('build/components/%s/bundle.js', $component), array(), '1.0', true);

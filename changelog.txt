@@ -1,5 +1,16 @@
 # 📟 Changelog
 
+## 1.2.13 (2022-12-30)
+
+
+### Bug Fixes
+
+* **wp:** keyboard navigation desktop menu (2052638)
+* **wp:** mobile keyboard navigation and submenu item (79a9882)
+* **wp:** on viewport change mobile menu auto closed supposed to be stayed (eab705f)
+* **wp:** remove modal search change it via search link (040905f)
+* **wp:** responsive issue viewport change sitemobilenav toggled not showing on desktop view (3a16f80)
+
 ## 1.2.12 (2022-12-30)
 
 

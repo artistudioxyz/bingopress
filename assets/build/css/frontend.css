@@ -323,14 +323,14 @@ video {
 .sticky {
 	position: sticky;
 }
+.right-0 {
+	right: 0;
+}
 .top-0 {
 	top: 0;
 }
 .left-0 {
 	left: 0;
-}
-.right-0 {
-	right: 0;
 }
 .left-1 {
 	left: 0.25rem;
@@ -431,9 +431,6 @@ video {
 .mb-6 {
 	margin-bottom: 1.5rem;
 }
-.mb-24 {
-	margin-bottom: 6rem;
-}
 .mr-4 {
 	margin-right: 1rem;
 }
@@ -445,6 +442,9 @@ video {
 }
 .ml-10 {
 	margin-left: 2.5rem;
+}
+.mb-24 {
+	margin-bottom: 6rem;
 }
 .ml-3 {
 	margin-left: 0.75rem;
@@ -517,6 +517,18 @@ video {
 .hidden {
 	display: none;
 }
+.h-auto {
+	height: auto;
+}
+.h-6 {
+	height: 1.5rem;
+}
+.h-4 {
+	height: 1rem;
+}
+.h-5 {
+	height: 1.25rem;
+}
 .h-32 {
 	height: 8rem;
 }
@@ -526,20 +538,8 @@ video {
 .h-full {
 	height: 100%;
 }
-.h-6 {
-	height: 1.5rem;
-}
 .h-screen {
 	height: 100vh;
-}
-.h-auto {
-	height: auto;
-}
-.h-4 {
-	height: 1rem;
-}
-.h-5 {
-	height: 1.25rem;
 }
 .h-3 {
 	height: 0.75rem;
@@ -1273,11 +1273,11 @@ body.single article .single-content-container p {
 	.md\:hidden {
 		display: none;
 	}
-	.md\:h-80 {
-		height: 20rem;
-	}
 	.md\:h-full {
 		height: 100%;
+	}
+	.md\:h-80 {
+		height: 20rem;
 	}
 	.md\:w-1\/2 {
 		width: 50%;
@@ -1987,8 +1987,14 @@ header .menu-main-menu-container {
 		border-color: rgba(243, 244, 246, var(--tw-border-opacity));
 	}
 }
-header .menu_primary .current_page_item a {
+header .menu-primary-container {
+	width: 100%;
+}
+header .menu_primary .current-menu-item a {
 	font-weight: 700;
+}
+header .menu_primary .mobile-sub-menu-toggle {
+	float: right;
 }
 @media screen and (max-width: 767px) {
 	header .menu_primary {
@@ -2002,12 +2008,12 @@ header .menu_primary .current_page_item a {
 	header .menu_primary a {
 		padding: 0.75rem 0;
 		display: block;
-		border-bottom-width: 1px;
-		--tw-border-opacity: 1;
-		border-color: rgba(243, 244, 246, var(--tw-border-opacity));
 	}
 	header .menu_primary a:last-child {
 		border-bottom-width: 0;
+	}
+	header .menu_primary .sub-menu {
+		display: none;
 	}
 }
 @media screen and (min-width: 768px) {
@@ -2042,10 +2048,7 @@ header .menu_primary .current_page_item a {
 		left: 100%;
 		padding: 1rem 1.5rem;
 		margin: 0 1.75rem;
-		--tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-			0 2px 4px -1px rgba(0, 0, 0, 0.06);
-		box-shadow: var(--tw-ring-offset-shadow, 0 0 transparent),
-			var(--tw-ring-shadow, 0 0 transparent), var(--tw-shadow);
+		border: 1px solid #e6eeef;
 		border-radius: 0.25rem;
 		font-size: 0.875rem;
 		line-height: 1.25rem;
@@ -2070,10 +2073,12 @@ header .menu_primary .current_page_item a {
 		visibility: visible;
 	}
 	header .menu_primary > .menu-item-has-children > .sub-menu {
+		display: block;
 		top: 100% !important;
 		left: 0 !important;
 		margin-top: 1rem;
 		margin-left: 0;
+		width: 12rem;
 	}
 	header .menu_primary > .menu-item-has-children > .sub-menu:before {
 		position: absolute;
@@ -2092,7 +2097,7 @@ header .menu_primary .current_page_item a {
 		.menu_primary
 		> .menu-item-has-children
 		.sub-menu
-		> .menu-item-has-children
+		.menu-item-has-children
 		.sub-menu {
 		display: none;
 		position: absolute;
@@ -2102,10 +2107,7 @@ header .menu_primary .current_page_item a {
 		left: 100%;
 		padding: 1rem 1.5rem;
 		margin: 0 1.75rem;
-		--tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-			0 2px 4px -1px rgba(0, 0, 0, 0.06);
-		box-shadow: var(--tw-ring-offset-shadow, 0 0 transparent),
-			var(--tw-ring-shadow, 0 0 transparent), var(--tw-shadow);
+		border: 1px solid #e6eeef;
 		border-radius: 0.25rem;
 		font-size: 0.875rem;
 		line-height: 1.25rem;
@@ -2121,7 +2123,7 @@ header .menu_primary .current_page_item a {
 		.menu_primary
 		> .menu-item-has-children
 		.sub-menu
-		> .menu-item-has-children
+		.menu-item-has-children
 		.sub-menu
 		a {
 		display: block;
@@ -2132,7 +2134,7 @@ header .menu_primary .current_page_item a {
 		.menu_primary
 		> .menu-item-has-children
 		.sub-menu
-		> .menu-item-has-children:hover
+		.menu-item-has-children:hover
 		> .sub-menu {
 		display: block;
 		-webkit-transform: translateY(0);
@@ -2154,8 +2156,11 @@ header .menu_primary .current_page_item a {
 	width: auto;
 	height: 1.5rem;
 }
+#menu-mobile-nav {
+	display: none;
+}
 @media screen and (max-width: 768px) {
-	.admin-bar #menu-nav {
+	.admin-bar #menu-mobile-nav {
 		padding-top: 4rem;
 	}
 }
@@ -2405,12 +2410,6 @@ a:hover {
 }
 .jconfirm.jconfirm-maximized #bingopress-search-results {
 	max-height: 83vh;
-}
-.bingopress-search-modal div.jconfirm-closeIcon {
-	padding-top: 1.25rem !important;
-}
-.bingopress-search-modal div.jconfirm-closeIcon i {
-	font-size: 1.25rem;
 }
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
