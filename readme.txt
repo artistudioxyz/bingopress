@@ -4,7 +4,7 @@ Tags: blog, portfolio
 Requires at least: 5.0
 Tested up to: 6.1.1
 Requires PHP: 7.1
-Stable tag: 1.2.13
+Stable tag: 1.2.14
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,3 +42,11 @@ License: MIT (http://opensource.org/licenses/MIT)
 
 * TailwindCSS - Copyright (c) Tailwind Labs, Inc - https://tailwindcss.com/
 License: MIT (http://opensource.org/licenses/MIT)
+
+* Images used in screenshot
+
+Author Name: pikisuperstar
+Author URI: http://www.freepik.com
+Resource URI: https://www.freepik.com/free-vector/young-people-jumping-together-illustration_5778619.htm
+License: Freepik License
+License URI: https://www.freepikcompany.com/legal

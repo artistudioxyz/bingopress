@@ -325,14 +325,14 @@
 .bingopress-container .sticky {
 	position: sticky;
 }
-.bingopress-container .right-0 {
-	right: 0;
-}
 .bingopress-container .top-0 {
 	top: 0;
 }
 .bingopress-container .left-0 {
 	left: 0;
+}
+.bingopress-container .right-0 {
+	right: 0;
 }
 .bingopress-container .left-1 {
 	left: 0.25rem;
@@ -433,20 +433,14 @@
 .bingopress-container .mb-6 {
 	margin-bottom: 1.5rem;
 }
+.bingopress-container .mb-24 {
+	margin-bottom: 6rem;
+}
 .bingopress-container .mr-4 {
 	margin-right: 1rem;
 }
 .bingopress-container .mt-4 {
 	margin-top: 1rem;
-}
-.bingopress-container .mt-6 {
-	margin-top: 1.5rem;
-}
-.bingopress-container .ml-10 {
-	margin-left: 2.5rem;
-}
-.bingopress-container .mb-24 {
-	margin-bottom: 6rem;
 }
 .bingopress-container .ml-3 {
 	margin-left: 0.75rem;
@@ -487,6 +481,9 @@
 .bingopress-container .ml-0 {
 	margin-left: 0;
 }
+.bingopress-container .mt-6 {
+	margin-top: 1.5rem;
+}
 .bingopress-container .ml-6 {
 	margin-left: 1.5rem;
 }
@@ -498,9 +495,6 @@
 }
 .bingopress-container .inline-block {
 	display: inline-block;
-}
-.bingopress-container .inline {
-	display: inline;
 }
 .bingopress-container .flex {
 	display: -webkit-box;
@@ -519,18 +513,6 @@
 .bingopress-container .hidden {
 	display: none;
 }
-.bingopress-container .h-auto {
-	height: auto;
-}
-.bingopress-container .h-6 {
-	height: 1.5rem;
-}
-.bingopress-container .h-4 {
-	height: 1rem;
-}
-.bingopress-container .h-5 {
-	height: 1.25rem;
-}
 .bingopress-container .h-32 {
 	height: 8rem;
 }
@@ -540,11 +522,23 @@
 .bingopress-container .h-full {
 	height: 100%;
 }
+.bingopress-container .h-6 {
+	height: 1.5rem;
+}
 .bingopress-container .h-screen {
 	height: 100vh;
 }
+.bingopress-container .h-auto {
+	height: auto;
+}
+.bingopress-container .h-4 {
+	height: 1rem;
+}
 .bingopress-container .h-3 {
 	height: 0.75rem;
+}
+.bingopress-container .h-5 {
+	height: 1.25rem;
 }
 .bingopress-container .h-16 {
 	height: 4rem;
@@ -557,9 +551,6 @@
 }
 .bingopress-container .w-6 {
 	width: 1.5rem;
-}
-.bingopress-container .w-5 {
-	width: 1.25rem;
 }
 .bingopress-container .w-3\/4 {
 	width: 75%;
@@ -578,6 +569,9 @@
 }
 .bingopress-container .w-4 {
 	width: 1rem;
+}
+.bingopress-container .w-5 {
+	width: 1.25rem;
 }
 .bingopress-container .w-56 {
 	width: 14rem;
@@ -958,6 +952,10 @@
 	font-size: 3rem;
 	line-height: 1;
 }
+.bingopress-container .text-xl {
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+}
 .bingopress-container .text-sm {
 	font-size: 0.875rem;
 	line-height: 1.25rem;
@@ -965,10 +963,6 @@
 .bingopress-container .text-4xl {
 	font-size: 2.25rem;
 	line-height: 2.5rem;
-}
-.bingopress-container .text-xl {
-	font-size: 1.25rem;
-	line-height: 1.75rem;
 }
 .bingopress-container .text-2xl {
 	font-size: 1.5rem;
@@ -985,12 +979,12 @@
 .bingopress-container .font-extrabold {
 	font-weight: 800;
 }
-.bingopress-container .font-bold {
-	font-weight: 700;
-}
 .bingopress-container .font-medium,
 .bingopress-container .header .nav-tab-wrapper li.tab-active div {
 	font-weight: 500;
+}
+.bingopress-container .font-bold {
+	font-weight: 700;
 }
 .bingopress-container .font-semibold {
 	font-weight: 600;
@@ -1254,20 +1248,11 @@
 	.bingopress-container .md\:-mt-44 {
 		margin-top: -11rem;
 	}
-	.bingopress-container .md\:mt-0 {
-		margin-top: 0;
-	}
-	.bingopress-container .md\:ml-2 {
-		margin-left: 0.5rem;
-	}
 	.bingopress-container .md\:mr-8 {
 		margin-right: 2rem;
 	}
 	.bingopress-container .md\:block {
 		display: block;
-	}
-	.bingopress-container .md\:inline-block {
-		display: inline-block;
 	}
 	.bingopress-container .md\:flex {
 		display: -webkit-box;
@@ -1278,11 +1263,11 @@
 	.bingopress-container .md\:hidden {
 		display: none;
 	}
-	.bingopress-container .md\:h-full {
-		height: 100%;
-	}
 	.bingopress-container .md\:h-80 {
 		height: 20rem;
+	}
+	.bingopress-container .md\:h-full {
+		height: 100%;
 	}
 	.bingopress-container .md\:w-1\/2 {
 		width: 50%;
@@ -1419,10 +1404,6 @@
 	.bingopress-container .lg\:my-2 {
 		margin-top: 0.5rem;
 		margin-bottom: 0.5rem;
-	}
-	.bingopress-container .lg\:mx-6 {
-		margin-left: 1.5rem;
-		margin-right: 1.5rem;
 	}
 	.bingopress-container .lg\:block {
 		display: block;

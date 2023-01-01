@@ -1,5 +1,18 @@
 # 📟 Changelog
 
+## 1.2.14 (2023-01-01)
+
+
+### Bug Fixes
+
+* **wp:** add screenshot resource attribution (dd3a21d)
+* **wp:** after opening the mobile menu, the focus should be trapped inside the mobile menu (198d4f1)
+* **wp:** mobile last tab navigation should go to close icon (83db4ed)
+* **wp:** on deskto version missing dropdown icon cant do tab navigation (a1811b8)
+* **wp:** remove search from header and use get_search_form function instead of put it manually (3209a88)
+* **wp:** remove THEME URI, the url is not qualified as theme uri (ca1455b)
+* **wp:** update screenshot.png violates wp policy look like advertisement (ac36cb3)
+
 ## 1.2.13 (2022-12-30)
 
 
