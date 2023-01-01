@@ -31,11 +31,7 @@ $bingopress_title = (!$bingopress_title) ? 'Archive' : $bingopress_title;
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                             </svg>
                         </div>
-                        <form method="GET" action="<?php echo esc_url_raw( wp_unslash(home_url())) ?>" class="w-full">
-                            <input type="text" name="s" class="w-full text-xl font-medium"
-                                   placeholder="<?php echo esc_attr__('Search ...','bingopress') ?>">
-                        </form>
-
+						<?php get_search_form() ?>
                     </div>
                 </div>
             </div>
