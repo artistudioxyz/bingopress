@@ -5,9 +5,6 @@
 /** Load Composer Vendor */
 require get_template_directory( __FILE__ ) . '/vendor/autoload.php';
 
-/** Load Freemius */
-//require get_template_directory( __FILE__ ) . '/freemius.php';
-
 /** Initiate */
 $bingopress = new BingoPress\Theme();
 $bingopress->run();
