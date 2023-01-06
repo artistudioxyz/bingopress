@@ -4,7 +4,7 @@ Tags: blog, portfolio
 Requires at least: 5.0
 Tested up to: 6.1.1
 Requires PHP: 7.1
-Stable tag: 1.2.14
+Stable tag: 1.2.15
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,9 @@ License URL: http://www.gnu.org/licenses/gpl-2.0.html
 * Animate.css - Copyright (c) 2015 Daniel Eden - http://daneden.me/animate
 License: MIT (http://opensource.org/licenses/MIT)
 
+* Dot Framework - Copyright (c) Dot Framework, Inc - https://github.com/artistudioxyz/dot-framework
+License: LGPL-3.0 (https://www.gnu.org/licenses/lgpl-3.0.txt)
+
 * Font Awesome by @davegandy - http://fontawesome.io
 License: (Font: SIL OFL 1.1, CSS: MIT License)
 
@@ -43,10 +46,11 @@ License: MIT (http://opensource.org/licenses/MIT)
 * TailwindCSS - Copyright (c) Tailwind Labs, Inc - https://tailwindcss.com/
 License: MIT (http://opensource.org/licenses/MIT)
 
+* TGM Plugin Activation (TGMPA) - Copyright (c) TGM Plugin Activation - https://github.com/TGMPA/TGM-Plugin-Activation
+License: GPL-2.0 (https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt)
+
 * Images used in screenshot
 
-Author Name: pikisuperstar
-Author URI: http://www.freepik.com
-Resource URI: https://www.freepik.com/free-vector/young-people-jumping-together-illustration_5778619.htm
-License: Freepik License
-License URI: https://www.freepikcompany.com/legal
+Resource URI: https://pxhere.com/en/photo/821085
+License: CC0 Public Domain
+License URI: https://creativecommons.org/publicdomain/zero/1.0/

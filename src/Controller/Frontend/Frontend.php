@@ -43,17 +43,6 @@ class Frontend extends Base
         $this->hooks[] = $action;
 
         /**
-         * @frontend - Load Modals
-         */
-        $action = clone $action;
-        $action->setHook('wp_footer');
-        $action->setCallback('load_modals');
-        $action->setAcceptedArgs(0);
-        $action->setDescription(__('Load Modals', 'bingopress'));
-        $action->setFeature($theme->getFeatures()['core_frontend']);
-        $this->hooks[] = $action;
-
-        /**
          * @frontend - Add After Content Widget
          */
         add_action('widgets_init', function () {
@@ -133,22 +122,5 @@ class Frontend extends Base
         $this->WP->wp_enqueue_style('bingopress_css', "build/css/frontend.min.css");
         $this->WP->wp_enqueue_style('bingopress_theme_css', "../style.css");
         $this->WP->wp_enqueue_script('bingopress_page_js', "build/js/frontend/frontend.min.js", [], '', true);
-    }
-
-    /**
-     * Load Modals.
-     *
-     * @return void
-     */
-    public function load_modals()
-    {
-        /**
-         * Set View.
-         */
-        $view = new View($this->Theme);
-        $view->setTemplate('backend.blank');
-        $view->setSections(['Frontend.modals.modal-search' => ['name' => 'Search', 'active' => true]]);
-        $view->setOptions(['shortcode' => false]);
-        $view->build();
     }
 }

@@ -1,5 +1,16 @@
 # 📟 Changelog
 
+## 1.2.15 (2023-01-06)
+
+
+### Bug Fixes
+
+* **wp:** add attribution for dot-framework and TGMPA (a822d3d)
+* **wp:** remove freemius (1f57f70)
+* **wp:** remove modal-search.php the file is unused (75a6d22)
+* **wp:** remove unused files (274a230)
+* **wp:** update cc in screenshot.png remove freepik (db60eb9)
+
 ## 1.2.14 (2023-01-01)
 
 

@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'artistudioxyz/dot-framework' => array(
-            'pretty_version' => 'v0.1.0',
-            'version' => '0.1.0.0',
-            'reference' => '377845378c162b3ffde12f8d3bc52502bfe8bbb9',
+            'pretty_version' => 'v0.1.1',
+            'version' => '0.1.1.0',
+            'reference' => '6335be74c5af2a4abe789f41435ad382e2637576',
             'type' => 'library',
             'install_path' => __DIR__ . '/../artistudioxyz/dot-framework',
             'aliases' => array(),
@@ -25,15 +25,6 @@
             'reference' => NULL,
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
-            'aliases' => array(),
-            'dev_requirement' => false,
-        ),
-        'freemius/wordpress-sdk' => array(
-            'pretty_version' => '2.5.3',
-            'version' => '2.5.3.0',
-            'reference' => '2e56d683dd7b30445940679ecb401d2aff746c9e',
-            'type' => 'library',
-            'install_path' => __DIR__ . '/../freemius/wordpress-sdk',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
