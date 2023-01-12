@@ -58,7 +58,7 @@ class View {
 	 */
 	public function __construct( ) {
         $theme = \BingoPress\Theme::getInstance();
-		$this->Theme  = $theme;
+		$this->Framework  = $theme;
 		$this->Helper  = ( method_exists( $theme, 'getHelper' ) ) ? $theme->getHelper() : '';
 		$this->WP      = ( method_exists( $theme, 'getWP' ) ) ? $theme->getWP() : '';
 		$this->data    = array();

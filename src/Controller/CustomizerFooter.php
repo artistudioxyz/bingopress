@@ -69,7 +69,7 @@ class CustomizerFooter extends Controller {
         ));
 
         /** Control: Social Skype */
-        foreach($this->Theme->getConfig()->default->bingopress_social_media as $social){
+        foreach($this->Framework->getConfig()->default->bingopress_social_media as $social){
             $key = sprintf('bingopress_footer_social_%s',$social->ID);
             $label = sprintf('%s (%s)', __('Social Media','bingopress') ,ucwords($social->ID));
             $wp_customize->add_setting($key, array(
