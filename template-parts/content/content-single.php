@@ -4,12 +4,6 @@
  *
  * @link https://artistudio.xyz
  */
-
-/** Global Variable */
-global $post;
-
-/** Get Post & Featured Image */
-$post->featured = get_the_post_thumbnail_url($post->ID, 'full');
 ?>
 
 <div id="primary-content">
@@ -19,11 +13,11 @@ $post->featured = get_the_post_thumbnail_url($post->ID, 'full');
 
 		<div class="container mx-auto md:-mt-32 relative">
 
-			<?php if($post->featured){ ?>
+			<?php if ( has_post_thumbnail() ){ ?>
 				<div class="mx-auto text-center pt-0 md:pt-4 pb-10 relative w-full max-w-5xl md:-mt-44">
-					<img src="<?php echo esc_url( $post->featured ) ?>"
+					<img src="<?php echo esc_url( get_the_post_thumbnail_url(get_the_ID(), 'full') ) ?>"
 						 class="post-featured-image mx-auto bg-white md:shadow-md"
-						 alt="<?php echo esc_attr( $post->post_title ) ?>">
+						 alt="<?php echo esc_attr( get_the_title() ) ?>">
 				</div>
 			<?php } else { ?>
 				<div class="mx-auto text-center py-6 relative w-full max-w-5xl">
@@ -32,28 +26,28 @@ $post->featured = get_the_post_thumbnail_url($post->ID, 'full');
 
 			<div class="max-w-4xl mx-auto">
 				<h1 class="font-bold text-4xl px-6 md:px-2 md:text-4xl text-gray-800">
-					<?php if($post->post_status!='publish'): ?>
+					<?php if(get_post_status(get_the_ID()) !='publish'): ?>
 						<i class="fas fa-lock"></i>
 					<?php endif; ?>
-					<?php echo esc_attr( $post->post_title ) ?>
+					<?php the_title() ?>
 				</h1>
 				<div class="post-info max-w-prose content-center overflow-hidden px-6 md:px-2 pt-6 mb-6 text-sm md:text-md">
 					<div class="pr-3 overflow-hidden lg:my-1 text-gray-400 border-r border-gray-200 inline-block">
-						<?php echo esc_attr( date('M j, Y', strtotime($post->post_modified)) ) ?>
+						<?php the_modified_date() ?>
 					</div>
 					<div class="px-3 overflow-hidden lg:my-1 text-gray-400 border-r border-gray-200 inline-block">
-						<?php $typeUrl = ($post->post_type=='docs') ? '/docs' : '/blog'; ?>
+						<?php $typeUrl = (get_post_type(get_the_ID())=='docs') ? '/docs' : '/blog'; ?>
 						<a href="<?php echo esc_url( home_url() . $typeUrl ) ?>">
-							<?php echo esc_html ( ucwords($post->post_type) ) ?>
+							<?php echo esc_html ( ucwords(get_post_type(get_the_ID())) ) ?>
 						</a>
 					</div>
 					<?php
 						$categories = [];
-						if($post->post_type=='docs'){
+						if(get_post_type(get_the_ID())=='docs'){
 							$ancestors = get_post_ancestors(get_the_ID());
 							$ancestors = array_reverse($ancestors);
 							/** Get  Title */
-							$data = isset($ancestors[0]) ? get_post($ancestors[0]) : $post;
+							$data = isset($ancestors[0]) ? get_post($ancestors[0]) : get_post(get_the_ID());
 							$bingopress_title = (get_field('sidebar_title', $data->ID)) ?
 								get_field('sidebar_title', $data->ID) : $data->post_name;
 							$bingopress_title = preg_replace('/[^\p{L}\p{N}\s]/u', ' ', $bingopress_title);
@@ -81,9 +75,9 @@ $post->featured = get_the_post_thumbnail_url($post->ID, 'full');
 					<?php endif; ?>
 					<div class="px-3 overflow-hidden lg:my-1 inline-block">
 						<?php
-							$user = get_userdata($post->post_author);
+							$user = get_userdata(get_post_field( 'post_author', get_the_ID() ));
 							$user = isset($user->data) ? $user->data : $user;
-							$user->link = get_author_posts_url($post->post_author);
+							$user->link = get_author_posts_url( get_post_field( 'post_author', get_the_ID() ) );
 							$user->label = sprintf("%s", ucwords($user->display_name));
 						?>
 						<a href="<?php echo esc_url($user->link) ?>" class="text-gray-400" style="text-decoration: none;">

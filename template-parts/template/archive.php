@@ -1,7 +1,6 @@
 <?php
 
 global $wp;
-global $post;
 global $authordata;
 
 $bingopress_query_search = empty($_GET['s'])? '': sanitize_text_field( wp_unslash($_GET['s']));

@@ -4,10 +4,6 @@
 		window.BINGOPRESS_THEME.siteDesktopNav(),
 			window.BINGOPRESS_THEME.siteMobileNav()
 	},
-	bingopressCloseDialogs: () => {
-		let e = window.BINGOPRESS_THEME.dialogs || {}
-		for (let s in e) e[s].close()
-	},
 	siteDesktopNav: () => {
 		jQuery('#menu-nav .sub-menu').each(function () {
 			jQuery(this)

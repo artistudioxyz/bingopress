@@ -11,9 +11,10 @@ namespace BingoPress\Controller;
 * @subpackage BingoPress/Controller
 */
 
+use BingoPress\Controller;
 use BingoPress\WordPress\Hook\Action;
 
-class Tgmpa extends Base
+class Tgmpa extends Controller
 {
 	/**
 	 * Admin constructor.
@@ -35,7 +36,6 @@ class Tgmpa extends Base
 		$action->setAcceptedArgs(0);
 		$action->setMandatory(true);
 		$action->setDescription(__('Require plugin tgmpa', 'bingopress'));
-		$action->setFeature($theme->getFeatures()['core_backend']);
 		$this->hooks[] = $action;
 	}
 
