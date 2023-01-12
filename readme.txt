@@ -4,7 +4,7 @@ Tags: blog, portfolio
 Requires at least: 5.0
 Tested up to: 6.1.1
 Requires PHP: 7.1
-Stable tag: 1.2.15
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,12 +36,6 @@ License: LGPL-3.0 (https://www.gnu.org/licenses/lgpl-3.0.txt)
 
 * Font Awesome by @davegandy - http://fontawesome.io
 License: (Font: SIL OFL 1.1, CSS: MIT License)
-
-* jQuery Confirm - Copyright (c) 2019 Boniface Pereira - https://craftpip.github.io/jquery-confirm
-License: MIT (http://opensource.org/licenses/MIT)
-
-* Select2 - Copyright (c) 2012-2017 Kevin Brown, Igor Vaynberg, and Select2 contributors - https://select2.org
-License: MIT (http://opensource.org/licenses/MIT)
 
 * TailwindCSS - Copyright (c) Tailwind Labs, Inc - https://tailwindcss.com/
 License: MIT (http://opensource.org/licenses/MIT)

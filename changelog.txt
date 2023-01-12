@@ -1,5 +1,35 @@
 # 📟 Changelog
 
+## 1.3.0 (2023-01-12)
+
+
+### Features
+
+* **wp:** initial setup use psr4 for clean directory structure (6655e40)
+
+
+### Bug Fixes
+
+* **wp:** compress screenshot.png file (d465e83)
+* **wp:** non escape variable (0d712c0)
+
+## 1.2.16 (2023-01-06)
+
+
+### Bug Fixes
+
+* **wp:** change screenshot.png to screenshot.jpg (1aae82d)
+* **wp:** change searchform action to use home_url instead (cd3523e)
+* **wp:** non translable text (11d8e31)
+* **wp:** remove features and localize scripts (fbeab5a)
+* **wp:** remove unused features (9456ce6)
+* **wp:** remove view files including backend form (261b987)
+* **wp:** use default WP function get_the_title (68f86f2)
+* **wp:** use get_post_field for getting author (f904457)
+* **wp:** use get_the_ID instead (c1563a1)
+* **wp:** use has_post_thumbnail function instead (dd171d8)
+* **wp:** use the_modified_date function (8ddaa86)
+
 ## 1.2.15 (2023-01-06)
 
 

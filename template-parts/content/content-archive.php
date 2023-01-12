@@ -4,43 +4,33 @@
  *
  * @link https://artistudio.xyz
  */
-
-/** Global Variables */
-global $post;
-
-/** Get Post & Featured Image */
-$post->featured = get_the_post_thumbnail_url($post->ID, 'full');
 ?>
 
 <div id="primary-content" class="grid-item pb-2">
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <div class="transition-all w-full shadow-md hover:shadow-xl duration-300 bg-white border border-gray-100 rounded-md relative">
-            <?php if($post->featured){ ?>
+            <?php if ( has_post_thumbnail() ){ ?>
                 <div class="mx-auto text-center w-full relative px-4 pt-4">
-                    <a href="<?php echo esc_attr(get_permalink($post->ID)) ?>">
-                        <img src="<?php echo esc_url($post->featured) ?>"
+                    <a href="<?php echo esc_url(get_permalink(get_the_ID())) ?>">
+                        <img src="<?php echo esc_url( get_the_post_thumbnail_url(get_the_ID(), 'full') ) ?>"
                              class="grid-featured-image w-full mx-auto bg-white rounded-md"
-                             alt="<?php echo esc_attr($post->post_title) ?>">
+                             alt="<?php echo esc_attr(get_the_title()) ?>">
                     </a>
                 </div>
             <?php } ?>
             <div class="overflow-hidden px-4">
                 <div class="max-w-none entry-content overflow-hidden lg:my-4 lg:px-2 w-full">
                     <div class="prose mx-auto text-center w-full max-w-4xl">
-                        <h3>
-                            <a href="<?php echo esc_attr(get_permalink($post->ID)) ?>">
-                                <?php echo esc_attr($post->post_title) ?>
-                            </a>
-                        </h3>
+						<?php the_title( '<h3><a href="' . esc_url( get_permalink() ) . '">', '</a></h3>' ); ?>
                     </div>
                     <div class="prose post-info mx-auto text-center max-w-prose content-center overflow-hidden">
                         <div class="px-4 py-2 overflow-hidden lg:my-1 lg:px-4 text-gray-400 inline-block text-sm">
                             <span class="pr-2 mr-2 border-r border-gray-200">
-                                <?php echo esc_html(date('M j, Y', strtotime($post->post_modified))) ?>
+								<?php the_modified_date() ?>
                             </span>
                             <?php
                                 $categories = [];
-                                if($post->post_type=='docs'){
+                                if(get_post_type(get_the_ID())=='docs'){
                                     $ancestors = get_post_ancestors(get_the_ID());
                                     $ancestors = array_reverse($ancestors);
                                     $data = get_post($ancestors[0]);
@@ -72,17 +62,17 @@ $post->featured = get_the_post_thumbnail_url($post->ID, 'full');
                             <?php endif; ?>
                             <span>
                                 <?php
-                                    $user = get_userdata($post->post_author);
+                                    $user = get_userdata(get_post_field( 'post_author', get_the_ID() ));
                                     $user = isset($user->data) ? $user->data : $user;
                                 ?>
-                                <a href="<?php echo esc_attr( get_author_posts_url($post->post_author) ) ?>" class="text-gray-400" style="text-decoration: none;">
+                                <a href="<?php echo esc_attr( get_author_posts_url( get_post_field( 'post_author', get_the_ID() ) ) ) ?>" class="text-gray-400" style="text-decoration: none;">
                                     <?php echo esc_attr( sprintf("%s", ucwords($user->display_name)) ); ?>
                                 </a>
                             </span>
                         </div>
                     </div>
 
-                    <?php if($post->post_content): ?>
+                    <?php if( !empty( get_the_content() ) ): ?>
                         <div class="prose px-4 pt-4 pb-6 border-t border-gray-200">
 
                             <?php the_excerpt(); ?>

@@ -20,7 +20,7 @@ $config = $this->Theme->getConfig();
 
         <div class="col-span-4 mx-8 md:mx-16 my-12">
             <h2 class="text-3xl md:text-5xl font-medium mb-4">
-                <?php echo esc_attr( $this->Theme->getName() ); ?>
+                <?php echo esc_html( $this->Theme->getName() ); ?>
             </h2>
 
             <div class="flex items-center">
@@ -36,7 +36,7 @@ $config = $this->Theme->getConfig();
                 <?php $url = isset($config->url->contact) ? $config->url->contact : '#'; ?>
                 <a href="<?php echo esc_url($url); ?>" target="_blank" class="text-sm inline-flex items-center leading-sm px-3 py-1 mb-4 ml-2 bg-primary-600 text-white rounded-full">
                     <i class="fas fa-paper-plane mr-2"></i>
-                    Contact
+					<?php echo esc_html__('Contact', 'bingopress') ?>
                 </a>
             </div>
 

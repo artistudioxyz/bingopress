@@ -4,16 +4,12 @@
  *
  * @link https://artistudio.xyz
  */
-
-/** Get Post & Featured Image */
-global $post;
-$post->featured = get_the_post_thumbnail_url($post->ID, 'full');
 ?>
 
 <div id="primary-content">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		<?php get_template_part('template-parts/elements/section-hero-heading', null, ['title' => $post->post_title]) ?>
+		<?php get_template_part('template-parts/elements/section-hero-heading', null, ['title' => get_the_title()]) ?>
 
 		<div class="mx-auto mb-6 relative">
 			<div class="lg:-mx-2">

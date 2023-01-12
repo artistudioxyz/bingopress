@@ -68,18 +68,6 @@
 			</div>
 		</nav>
 	</div>
-	<?php if ( ! $this->Helper->isPremiumPlan() && $this->Helper->getUpgradeURL() ) : ?>
-		<div class="header bg-primary-500 text-white shadow-sm rounded-lg border border-gray-200 mt-6 mr-4">
-			<a href="<?php echo esc_url( $this->Helper->getUpgradeURL() ); ?>">
-				<div class="flex-shrink flex items-center relative rounded-lg py-4 px-6">
-					<em class="fas fa-exclamation"></em>
-					<p class="ml-4">
-						You are using free plan. Upgrade Now for better Experience!
-					</p>
-				</div>
-			</a>
-		</div>
-	<?php endif; ?>
 	<div class="content py-4 mr-4">
 		<?php foreach ( $this->sections as $bingopress_path => $section ) : ?>
 			<?php extract( $this->sectionLoopLogic( $bingopress_path, $section ) ); ?>
