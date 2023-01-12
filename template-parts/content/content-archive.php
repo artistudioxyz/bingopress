@@ -55,7 +55,7 @@
                                 <span class="pr-2 mr-2 border-r border-gray-200">
                                     <?php foreach($categories as $category): ?>
                                         <a href="<?php echo esc_attr($category['url']) ?>" style="color: rgba(156, 163, 175, 1);">
-                                            <?php echo esc_attr($category['name']) ?>
+                                            <?php echo esc_html($category['name']) ?>
                                         </a>
                                     <?php endforeach; ?>
                                 </span>
@@ -66,7 +66,7 @@
                                     $user = isset($user->data) ? $user->data : $user;
                                 ?>
                                 <a href="<?php echo esc_attr( get_author_posts_url( get_post_field( 'post_author', get_the_ID() ) ) ) ?>" class="text-gray-400" style="text-decoration: none;">
-                                    <?php echo esc_attr( sprintf("%s", ucwords($user->display_name)) ); ?>
+                                    <?php echo esc_html( sprintf("%s", ucwords($user->display_name)) ); ?>
                                 </a>
                             </span>
                         </div>

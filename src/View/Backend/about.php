@@ -30,7 +30,7 @@ $config = $this->Theme->getConfig();
                     </svg>
                     <?php $url = isset($config->url->wordpress) ? $config->url->wordpress : '#'; ?>
                     <a href="<?php echo esc_url($url); ?>" <?php if($url!='#') echo 'target="_blank"'; ?>>
-                        <?php echo esc_attr( $this->Theme->getVersion() ); ?>
+                        <?php echo esc_html( $this->Theme->getVersion() ); ?>
                     </a>
                 </div>
                 <?php $url = isset($config->url->contact) ? $config->url->contact : '#'; ?>
