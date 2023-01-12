@@ -2,7 +2,7 @@
 /**
  * Backend Page Setting - About Page
  */
-$config = $this->Theme->getConfig();
+$config = $this->Framework->getConfig();
 ?>
 
 <div class="-mx-2 my-2 px-2">
@@ -20,7 +20,7 @@ $config = $this->Theme->getConfig();
 
         <div class="col-span-4 mx-8 md:mx-16 my-12">
             <h2 class="text-3xl md:text-5xl font-medium mb-4">
-                <?php echo esc_html( $this->Theme->getName() ); ?>
+                <?php echo esc_html( $this->Framework->getName() ); ?>
             </h2>
 
             <div class="flex items-center">
@@ -30,7 +30,7 @@ $config = $this->Theme->getConfig();
                     </svg>
                     <?php $url = isset($config->url->wordpress) ? $config->url->wordpress : '#'; ?>
                     <a href="<?php echo esc_url($url); ?>" <?php if($url!='#') echo 'target="_blank"'; ?>>
-                        <?php echo esc_html( $this->Theme->getVersion() ); ?>
+                        <?php echo esc_html( $this->Framework->getVersion() ); ?>
                     </a>
                 </div>
                 <?php $url = isset($config->url->contact) ? $config->url->contact : '#'; ?>
@@ -41,7 +41,7 @@ $config = $this->Theme->getConfig();
             </div>
 
             <p class="text-lg">
-                <?php echo ( esc_attr( $this->Theme->getConfig()->description ) ) ? esc_attr($this->Theme->getConfig()->description) : ''; ?>
+                <?php echo ( esc_attr( $this->Framework->getConfig()->description ) ) ? esc_attr($this->Framework->getConfig()->description) : ''; ?>
             </p>
         </div>
 

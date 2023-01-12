@@ -1,5 +1,12 @@
 # 📟 Changelog
 
+## 1.3.3 (2023-01-12)
+
+
+### Bug Fixes
+
+* **wp:** customizer fatal error (51325a5)
+
 ## 1.3.2 (2023-01-12)
 
 

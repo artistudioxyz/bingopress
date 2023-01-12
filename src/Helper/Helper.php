@@ -20,14 +20,14 @@ class Helper {
 
     /**
      * Define const which will be used within the framework
-     * @param   object   $theme     WordPress theme object
+     * @param   object  WordPress object
      * @return void
      */
-    public function defineConst($theme){
-        define('BINGOPRESS_NAME', $theme->getName());
-        define('BINGOPRESS_VERSION', $theme->getVersion());
-        define('BINGOPRESS_PRODUCTION', $theme->isProduction());
-        define('BINGOPRESS_PATH', json_encode( $theme->getPath() ));
+    public function defineConst($framework){
+        define('BINGOPRESS_NAME', $framework->getName());
+        define('BINGOPRESS_VERSION', $framework->getVersion());
+        define('BINGOPRESS_PRODUCTION', $framework->isProduction());
+        define('BINGOPRESS_PATH', json_encode( $framework->getPath() ));
     }
 
 }
