@@ -1,3 +1,9 @@
+<?php
+/**
+ * Default template
+ */
+?>
+
 <div class="bingopress-container">
 
 	<div class="header bg-white shadow-sm rounded-lg mt-6 mr-4">
@@ -6,7 +12,7 @@
 			<div class="text-white flex-shrink flex items-center relative rounded-lg bg-white py-2 px-4 mr-4 md:mr-8">
 				<div class="w-4 h-4 bg-primary-600 rounded-full"></div>
 				<h1 class="text-gray-800 text-lg font-medium ml-4">
-					<?php echo esc_attr( $this->Page->getPageTitle() ); ?>
+					<?php echo esc_html__( $this->Page->getPageTitle(), 'bingopress' ); ?>
 				</h1>
 			</div>
 
@@ -55,7 +61,7 @@
 											<div data-tab="section-<?php echo esc_attr( $slug ); ?>" class="menu-item cursor-pointer text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"  role="menuitem" >
                                                 <?php
                                                     /** Tab contains 2 types: External Link (https://google.com) and Internal Link (#setting) */
-                                                    echo strpos( $tab, '//' ) ? esc_url( $tab ) : esc_attr( $tab );
+                                                    echo strpos( $tab, '//' ) ? esc_url( $tab ) : esc_html( $tab );
                                                 ?>
 											</div>
 										</div>

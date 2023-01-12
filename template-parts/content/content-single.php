@@ -17,7 +17,7 @@
 				<div class="mx-auto text-center pt-0 md:pt-4 pb-10 relative w-full max-w-5xl md:-mt-44">
 					<img src="<?php echo esc_url( get_the_post_thumbnail_url(get_the_ID(), 'full') ) ?>"
 						 class="post-featured-image mx-auto bg-white md:shadow-md"
-						 alt="<?php echo esc_attr( get_the_title() ) ?>">
+						 alt="<?php echo esc_html( get_the_title() ) ?>">
 				</div>
 			<?php } else { ?>
 				<div class="mx-auto text-center py-6 relative w-full max-w-5xl">
