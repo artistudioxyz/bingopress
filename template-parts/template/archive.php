@@ -50,12 +50,13 @@
 
     <div class="archive-pagination container mx-auto max-w-7xl content-center text-center py-8">
         <?php
-        the_posts_pagination(array(
-            'mid_size' => 2,
-            'prev_text' => __('Previous', 'bingopress'),
-            'next_text' => __('Next', 'bingopress'),
-        ));
+			the_posts_pagination(array(
+				'mid_size' => 2,
+				'prev_text' => __('Previous', 'bingopress'),
+				'next_text' => __('Next', 'bingopress'),
+			));
         ?>
+		<?php wp_link_pages(); ?>
     </div>
 
 <?php else : ?>
