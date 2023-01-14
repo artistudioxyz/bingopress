@@ -41,7 +41,9 @@ $config = $this->Framework->getConfig();
             </div>
 
             <p class="text-lg">
-                <?php echo ( esc_attr( $this->Framework->getConfig()->description ) ) ? esc_attr($this->Framework->getConfig()->description) : ''; ?>
+				<?php if( $this->Framework->getConfig()->description ): ?>
+					<?php echo esc_html(esc_html($this->Framework->getConfig()->description)) ?>
+				<?php endif; ?>
             </p>
         </div>
 
