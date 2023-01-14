@@ -9,7 +9,16 @@
 <div id="primary-content">
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		<?php if(!is_front_page()) get_template_part('template-parts/elements/section-hero-heading', null, ['title' => get_the_title()]) ?>
+		<?php if(!is_front_page()): ?>
+			<div class="section-hero-heading relative w-full h-32 md:h-80">
+				<?php
+					the_title(
+						'<h1 class="text-4xl md:text-6xl font-bold text-center relative pt-4 md:pt-0 md:top-32 mb-24">',
+						'</h1>'
+					);
+				?>
+			</div>
+		<?php endif; ?>
 
 		<div class="container mx-auto bingopress-container mb-6 relative">
 			<div class="lg:-mx-2">

@@ -46,7 +46,7 @@ class BackendPage extends Controller {
 	public function page_setting() {
 		/** Section */
 		$sections = array();
-		$sections['Backend.about'] = array( 'name' => 'About', 'active' => true);
+		$sections['Backend.about'] = array( 'name' => __('About', 'bingopress'), 'active' => true);
 
 		/** Set View */
 		$view = new View( $this->Framework );

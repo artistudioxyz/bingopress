@@ -8,7 +8,7 @@
                         <?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ): ?>
                             <?php the_custom_logo(); ?>
                         <?php else: ?>
-                            <img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/logo.png') ?>" class="h-6" alt="Logo">
+							<?php bloginfo(); ?> <?php bloginfo('description'); ?>
                         <?php endif; ?>
                     </a>
                 </div>
@@ -19,7 +19,7 @@
 								<?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ): ?>
 									<?php the_custom_logo(); ?>
 								<?php else: ?>
-									<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/logo.png') ?>" class="h-4" alt="Logo">
+									<?php bloginfo(); ?> <?php bloginfo('description'); ?>
 								<?php endif; ?>
 							</a>
 						</div>
@@ -41,7 +41,7 @@
 								<?php if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ): ?>
 									<?php the_custom_logo(); ?>
 								<?php else: ?>
-									<img src="<?php echo esc_url( get_template_directory_uri() . '/assets/img/logo.png') ?>" class="h-4" alt="Logo">
+									<?php bloginfo(); ?> <?php bloginfo('description'); ?>
 								<?php endif; ?>
 							</a>
 						</div>

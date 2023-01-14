@@ -1,26 +1,24 @@
 <?php
-
-global $wp;
-global $authordata;
-
-$bingopress_query_search = empty($_GET['s'])? '': sanitize_text_field( wp_unslash($_GET['s']));
-/** Page Title */
-$bingopress_title = ($authordata) ? sprintf("Author: %s", ucwords($authordata->data->display_name)) : '';
-$bingopress_title = (!$bingopress_title && strpos( home_url($wp->request), "category")) ? sprintf("Category: %s", (isset(get_the_category()[0])) ? get_the_category()[0]->name : '') : $bingopress_title;
-$bingopress_title = (!$bingopress_title && $bingopress_query_search) ? sprintf("Search result for: %s", $bingopress_query_search) : $bingopress_title;
-$bingopress_title = (!$bingopress_title) ? 'Archive' : $bingopress_title;
-
+/**
+ * Archive template
+ */
 ?>
+
+
+<div class="section-hero-heading relative w-full h-32 md:h-80">
+	<?php if( is_search() ){ ?>
+		<h1 class="text-4xl md:text-6xl font-bold text-center relative pt-4 md:pt-0 md:top-32 mb-24">
+			<?php /* translators: %s: search query. */
+			printf( esc_html__( 'Search result for: %s', 'bingopress' ), get_search_query() ); ?>
+		</h1>
+	<?php } else { ?>
+		<?php the_archive_title( '<h1 class="text-4xl md:text-6xl font-bold text-center relative pt-4 md:pt-0 md:top-32 mb-24">', '</h1>' ); ?>
+	<?php } ?>
+</div>
 
 <div class="container mx-auto max-w-4xl -mt-12 mb-6 relative">
     <div class="overflow-hidden lg:-mx-2">
         <div class="max-w-none entry-content overflow-hidden px-8 lg:my-2 lg:px-2 w-full">
-
-            <div class="prose mx-auto text-center w-full max-w-4xl py-12 mt-20 block sm:hidden">
-                <h1 class="prose text-5xl">
-                    <?php echo esc_html($bingopress_title) ?>
-                </h1>
-            </div>
 
             <div class="w-full mx-auto overflow-hidden px-4 mb-2 md:px-12 rounded-md shadow-md bg-white border border-gray-100">
                 <div class="item-center relative py-6">
