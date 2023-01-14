@@ -40,11 +40,11 @@ $config = $this->Framework->getConfig();
                 </a>
             </div>
 
-            <p class="text-lg">
-				<?php if( $this->Framework->getConfig()->description ): ?>
-					<?php echo esc_html(esc_html($this->Framework->getConfig()->description)) ?>
-				<?php endif; ?>
-            </p>
+			<?php if( $this->Framework->getConfig()->description ): ?>
+            	<p class="text-lg">
+					<?php echo esc_html($this->Framework->getConfig()->description) ?>
+            	</p>
+			<?php endif; ?>
         </div>
 
     </main>

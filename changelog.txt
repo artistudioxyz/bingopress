@@ -1,5 +1,12 @@
 # 📟 Changelog
 
+## 1.3.5 (2023-01-14)
+
+
+### Bug Fixes
+
+* **wp:** wrong escape function about.php (a970228)
+
 ## 1.3.4 (2023-01-14)
 
 
