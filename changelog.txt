@@ -1,5 +1,12 @@
 # 📟 Changelog
 
+## 1.3.7 (2023-01-15)
+
+
+### Bug Fixes
+
+* **wp:** use correct escape function in content-archive.php (cce39f9)
+
 ## 1.3.6 (2023-01-14)
 
 
