@@ -54,7 +54,7 @@
                             <?php if($categories): ?>
                                 <span class="pr-2 mr-2 border-r border-gray-200">
                                     <?php foreach($categories as $category): ?>
-                                        <a href="<?php echo esc_attr($category['url']) ?>" style="color: rgba(156, 163, 175, 1);">
+                                        <a href="<?php echo esc_url($category['url']) ?>" style="color: rgba(156, 163, 175, 1);">
                                             <?php echo esc_html($category['name']) ?>
                                         </a>
                                     <?php endforeach; ?>
@@ -64,8 +64,11 @@
                                 <?php
                                     $user = get_userdata(get_post_field( 'post_author', get_the_ID() ));
                                     $user = isset($user->data) ? $user->data : $user;
+									$author_posts_url = get_the_ID();
+									$author_posts_url = get_post_field( 'post_author', $author_posts_url );
+									$author_posts_url = get_author_posts_url( $author_posts_url );
                                 ?>
-                                <a href="<?php echo esc_attr( get_author_posts_url( get_post_field( 'post_author', get_the_ID() ) ) ) ?>" class="text-gray-400" style="text-decoration: none;">
+                                <a href="<?php echo esc_url( $author_posts_url ) ?>" class="text-gray-400" style="text-decoration: none;">
                                     <?php echo esc_html( sprintf("%s", ucwords($user->display_name)) ); ?>
                                 </a>
                             </span>
@@ -79,7 +82,7 @@
 
                             <?php if ( has_tag() ) : ?>
                                 <div class="single_post_tags post-tags">
-                                    <?php the_tags('<b>Tags : </b><br>', ' ' ); ?>
+									<?php the_tags('<b>' . esc_html__( 'Tags : ', 'bingopress' ) . '</b><br>', ' ' ); ?>
                                 </div>
                             <?php endif; ?>
                         </div>
